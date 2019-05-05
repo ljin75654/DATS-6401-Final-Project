@@ -48,7 +48,6 @@ body {
   }
 
   .container button {
-    font-size: 36px;
     margin: 0;
   }
 
@@ -60,7 +59,7 @@ body {
     -ms-transform: translate(-50%, -50%);
     background-color: #31C23A;
     color: white;
-    font-size: 20px;
+    font-size: 36px;
     border: none;
     cursor: pointer;
     text-align: center;
