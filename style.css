@@ -17,7 +17,7 @@ body {
   }
 
   .sidebar a {
-    padding: 5px 5px 5px 32px;
+    padding: 5px 5px 5px 20px;
     text-decoration: none;
     font-size: 25px;
     color: #f1f1f1;
@@ -33,7 +33,7 @@ body {
   .sidebar .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 15px;
     font-size: 36px;
     margin-left: 50px;
   }
@@ -48,7 +48,8 @@ body {
   }
 
   .container button {
-    margin: 20px;
+    font-size: 36px;
+    margin: 0;
   }
 
   .container .openbtn {
