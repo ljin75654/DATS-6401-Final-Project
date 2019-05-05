@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  </head>
+  <body>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Home</a>
+    <a href="#">Dataset</a>
+    <a href="#">Analysis</a>
+    <a href="#">Report</a>
+    <a href="#">Visualization</a>
+    <a href="#">Contributors</a>
+  </div>
+
+  <div id="main">
+
+  <div class="container">
+    <img src="img_snow_wide.jpg" alt="Snow" style="width:100%;">
+    <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+  </div>
+
+  <div class="w3-container">
+  <p>In this example, the sidebar is hidden (style="display:none")</p>
+  <p>It is shown when you click on the menu icon in the top left corner.</p>
+  <p>When it is opened, it shifts the page content to the right.</p>
+  <p>We use JavaScript to add a 25% left margin to the div element with id="main" when this happens. The value "25%" matches the width of the sidebar.</p>
+  </div>
+
+  <script>
+  function openNav() {
+    document.getElementById("main").style.marginLeft = "25%";
+    document.getElementById("mySidebar").style.width = "30%";
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("openNav").style.display = 'none';
+  }
+
+  function closeNav() {
+    document.getElementById("main").style.marginLeft = "0%";
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("openNav").style.display = "inline-block";
+    document.getElementById("mySidenav").style.width = "0";
+  }
+  </script>
+
+  </body>
+</html> 
