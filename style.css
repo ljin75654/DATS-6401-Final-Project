@@ -57,10 +57,9 @@ body {
     top: 20px;
     left: 50px;
     transform: translate(-50%, -50%);
-    background-color: #31C23A;
+    background-color: #BAC5CB;
     color: white;
-    border-radius: 25px;
-    border-bottom: 4px solid red;
+    border-left: 4px solid #DFC0F3;
     cursor: pointer;
     text-align: center;
   }
