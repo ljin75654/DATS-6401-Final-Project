@@ -59,7 +59,8 @@ body {
     transform: translate(-50%, -50%);
     background-color: #31C23A;
     color: white;
-    border: none;
+    border-radius: 25px;
+    border-bottom: 4px solid red;
     cursor: pointer;
     text-align: center;
   }
