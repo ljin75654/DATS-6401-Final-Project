@@ -35,7 +35,7 @@ body {
     top: 0;
     right: 15px;
     font-size: 36px;
-    margin-left: 50px;
+    margin-left: 40px;
   }
 
   #main {
@@ -48,8 +48,8 @@ body {
   }
 
   .container button {
-    margin: 10;
-      font-size: 33px;
+    margin: 20;
+    font-size: 33px;
   }
 
   .container .openbtn {
