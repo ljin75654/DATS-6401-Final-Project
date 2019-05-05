@@ -55,9 +55,8 @@ body {
   .container .openbtn {
     position: absolute;
     top: 20px;
-    left: 40px;
+    left: 50px;
     transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
     background-color: #31C23A;
     color: white;
     border: none;
