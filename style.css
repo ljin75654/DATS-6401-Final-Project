@@ -45,8 +45,6 @@
 
   .container .openbtn {
     position: absolute;
-    top: 7.4%;
-    left: 10.6%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     background-color: #31C23A;
