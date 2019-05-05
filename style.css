@@ -47,6 +47,10 @@ body {
     height: auto;
   }
 
+  .container button {
+    margin: 20px;
+  }
+
   .container .openbtn {
     position: absolute;
     padding: 14px 16px;
