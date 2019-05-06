@@ -64,7 +64,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: #BAC5CB;
     color: white;
-    border-left: 4px solid #DFC0F3;
+    border-bottom: 4px solid #EF81DC;
     cursor: pointer;
     text-align: center;
   }
