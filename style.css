@@ -9,6 +9,7 @@ body {
     position: fixed;
     z-index: 1;
     background-color: #31C23A;
+    overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
   }
@@ -47,6 +48,13 @@ body {
   .container button {
     margin: 0;
     font-size: 33px;
+  }
+
+  .openbtn {
+    font-size: 33px;
+    cursor: pointer;
+    background-color: #BAC5CB;
+    color: white;
   }
 
   .container .openbtn {
