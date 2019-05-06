@@ -7,6 +7,7 @@ body {
     height: 100%;
     width: 25%;
     position: fixed;
+    display: block;
     z-index: 1;
     background-color: #31C23A;
     overflow-x: hidden;
