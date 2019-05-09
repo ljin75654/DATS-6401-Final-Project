@@ -26,12 +26,12 @@ body {
     transition: 0.3s;
   }
 
-  .sidebar a:hover .dropbtn:hover {
+  .sidebar a:hover {
     color: #113213;
     text-decoration: underline;
   }
 
-  .sidebar .closebtn .dropbtn{
+  .sidebar .closebtn {
     position: absolute;
     top: 0;
     right: 15px;
@@ -78,10 +78,4 @@ body {
 
   .title {
     padding: 10px 10px;
-  }
-
-  .dropcontainer {
-    display: none;
-    background-color: #262626;
-    padding-left: 8px;
   }
