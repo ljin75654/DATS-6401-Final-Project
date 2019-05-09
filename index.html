@@ -13,14 +13,12 @@
     <a href="dataset.html">Dataset</a>
     <a href="analysis.html">Analysis</a>
     <a href="report.html">Report</a>
-    <div class="dropdown">
-      <button class="dropbtn">Visualization<li class="fa fa-caret-down"></i></button>
-      <div class="dropdown-content">
-        <a href="density_country.html">Density by Country</a>
-        <a href="best_rated.html">Best Rated</a>
-        <a href="density_city.html">Density by City</a>
-        <a href="price_rating.html">Price/Rating</a>
-      </div>
+    <button class="dropdown-btn">Visualization<i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-container">
+      <a href="density_country.html">Density by Country</a>
+      <a href="best_rated.html">Best Rated</a>
+      <a href="density_city.html">Density by City</a>
+      <a href="price_rating.html">Price/Rating</a>
     </div>
     <a href="contributors.html">Contributors</a>
   </div>
@@ -49,6 +47,21 @@
   function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginLeft= "0";
+  }
+
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
   }
   </script>
 
