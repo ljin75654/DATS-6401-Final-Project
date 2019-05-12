@@ -150,6 +150,7 @@ body {
     background-color: white;
     position: relative;
     border-radius: 6px;
+    width: 40%;
   }
   .timeline > li {
     margin-bottom: 20px;
