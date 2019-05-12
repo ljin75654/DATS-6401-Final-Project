@@ -67,7 +67,7 @@ body {
     transform: translate(-50%, -50%);
     background-color: #BAC5CB;
     color: white;
-    border-bottom: 4px solid #EF81DC;
+    border-bottom: 4px solid #F9D3D3;
     cursor: pointer;
     text-align: center;
   }
@@ -145,7 +145,7 @@ body {
   }
   .timeline-panel {
     padding: 20px 30px;
-    background-color: white;
+    background-color: #F9D3D3;
     position: relative;
     border-radius: 6px;
     width: 30%;
