@@ -261,3 +261,13 @@ body {
   .timeline-body > p + p {
     margin-top: 5px;
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F9D3D3;
+    color: #113213;
+    text-align: left;
+  }
