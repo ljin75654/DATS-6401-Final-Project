@@ -140,7 +140,7 @@ body {
     content: " ";
     width: 3px;
     background-color: #eeeeee;
-    left: 31%;
+    left: 32.5%;
     margin-left: -1.5px;
   }
   .timeline-panel {
@@ -151,7 +151,7 @@ body {
     width: 30%;
   }
   .right {
-    left: -36%;
+    left: -35%;
   }
   .timeline > li {
     margin-bottom: 20px;
@@ -214,7 +214,7 @@ body {
     text-align: center;
     position: absolute;
     top: 16px;
-    left: 31.5%;
+    left: 32.5%;
     margin-left: -25px;
     background-color: #999999;
     z-index: 100;
