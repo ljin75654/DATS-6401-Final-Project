@@ -142,7 +142,7 @@ body {
     content: " ";
     width: 3px;
     background-color: #eeeeee;
-    left: 30%;
+    left: 32%;
     margin-left: -1.5px;
   }
   .timeline-panel {
@@ -150,7 +150,7 @@ body {
     background-color: white;
     position: relative;
     border-radius: 6px;
-    width: 29%;
+    width: 30%;
   }
   .right {
     left: 30%;
