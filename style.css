@@ -124,12 +124,14 @@ body {
 	float: left;
 	margin-top: 50px;
 	width: 100%;
+	left: 20px;
   }
 
   .timeline {
     list-style: none;
     padding: 20px 0 20px;
     position: relative;
+    font-size: 30px;
   }
   .timeline:before {
     top: 0;
