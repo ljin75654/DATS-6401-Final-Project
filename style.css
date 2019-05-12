@@ -131,7 +131,7 @@ body {
 
   .timeline {
     list-style: none;
-    padding: 20px 0 20px;
+    padding: 20px 20px 20px;
     position: relative;
     font-size: 25px;
   }
