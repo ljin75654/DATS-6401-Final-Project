@@ -140,7 +140,7 @@ body {
     content: " ";
     width: 3px;
     background-color: #eeeeee;
-    left: 32%;
+    left: 31%;
     margin-left: -1.5px;
   }
   .timeline-panel {
@@ -151,7 +151,7 @@ body {
     width: 30%;
   }
   .right {
-    left: -37%;
+    left: -36%;
   }
   .timeline > li {
     margin-bottom: 20px;
