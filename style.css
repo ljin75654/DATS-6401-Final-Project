@@ -78,6 +78,7 @@ body {
 
   .title {
     padding: 10px 10px;
+    float: center;
   }
 
   .title-area {
@@ -122,6 +123,7 @@ body {
 	margin-top: 50px;
 	width: 100%;
 	left: 20px;
+	padding: 20px 50px 10px 80px;
   }
 
   .about li {
