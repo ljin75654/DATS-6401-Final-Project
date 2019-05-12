@@ -66,14 +66,14 @@ body {
     left: 55px;
     transform: translate(-50%, -50%);
     background-color: #BAC5CB;
-    color: white;
+    color: #113213;
     border-bottom: 4px solid #F9D3D3;
     cursor: pointer;
     text-align: center;
   }
 
   .container .openbtn:hover {
-    color: #113213;
+    color: white;
   }
 
   .title {
