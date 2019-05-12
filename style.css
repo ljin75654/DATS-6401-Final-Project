@@ -145,6 +145,12 @@ body {
     left: 50%;
     margin-left: -1.5px;
   }
+  .timeline-panel {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
   .timeline > li {
     margin-bottom: 20px;
     position: relative;
