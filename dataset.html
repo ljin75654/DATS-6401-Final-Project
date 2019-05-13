@@ -149,6 +149,13 @@
 				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
 			  });
+			  g.append("text")
+            			.attr("class", "label")
+            			.attr("y", d => yScale(yValue(d))+3)
+            			.attr("x", d => xScale(xValue(d)))
+            			.text(function (d) {
+                		  return yValue;
+            		  });
 			</script></p>
         </div>
       </div>
