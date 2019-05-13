@@ -143,6 +143,14 @@
 					.attr('width', d => xScale.bandwidth())
 					.attr('height', d => innerHeight - yScale(yValue(d)))
 					.attr('fill', 'steelblue');
+				        .on("mousemove", function(d){
+            				  tooltip
+              				    .style("left", d3.event.pageX - 50 + "px")
+              				    .style("top", d3.event.pageY - 70 + "px")
+              				    .style("display", "inline-block")
+              				    .html((d.area) + "<br>" + "£" + (d.value));
+        				})
+    					.on("mouseout", function(d){ tooltip.style("display", "none");});
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
