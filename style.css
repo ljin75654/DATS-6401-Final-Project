@@ -284,3 +284,10 @@ body {
     padding: 14px;
     text-align: center;
   }
+
+  .subtitle {
+    display: inline;
+    float: left;
+    text-align: left;
+    padding: 10px 50px 10px 80px;
+  }
