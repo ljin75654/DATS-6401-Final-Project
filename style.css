@@ -96,11 +96,11 @@ body {
   }
 
   .title-area {
-    color: #53AE53;
+    color: #61E161;
   }
 
   .title-area li {
-	color: #53AE53;
+	color: #61E161;
 	padding: 0 15px;
 	text-align: left;
   }
@@ -116,7 +116,7 @@ body {
 	float: left;
 	width: 100%;
 	left: 20px;
-	color: #53AE53;
+	color: #61E161;
 	padding: 20px 50px 10px 80px;
   }
 
@@ -268,7 +268,7 @@ body {
     bottom: 0;
     width: 100%;
     background-color: #F9D3D3;
-    color: #53AE53;
+    color: #61E161;
     text-align: right;
     padding: 0 15px 0 0;
     opacity:0.75;
