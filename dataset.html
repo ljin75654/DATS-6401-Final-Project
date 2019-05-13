@@ -148,8 +148,8 @@
 				g.selectAll('text').data(data)
 				  .enter().append('text')
 				  	.attr("class", "label")
-				  	.attr("y", d => yScale(yValue(d))+3)
-				  	.attr("x", d => xScale(xValue(d))+3)
+				  	.attr("y", d => yScale(yValue(d)))
+				  	.attr("x", d => xScale(xValue(d)))
 				  	.text(String);
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
