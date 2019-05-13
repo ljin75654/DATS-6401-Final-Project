@@ -145,11 +145,12 @@
 					.attr('width', d => xScale.bandwidth())
 					.attr('height', d => innerHeight - yScale(yValue(d)))
 					.attr('fill', 'steelblue');
+				g.selectAll('text').data(data)
 				  .enter().append('text')
 				  	.attr("class", "label")
 				  	.attr("y", d => yScale(yValue(d))+3)
 				  	.attr("x", d => xScale(xValue(d))+3)
-				  	.text(function(d) { return yValue;});
+				  	.text(String);
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
