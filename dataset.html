@@ -28,14 +28,135 @@
     <div class="container">
       <div class="row">
         <div class="title-area">
-          <h2 class="title">Project (3 goals)</h2>
-	          <ul style="list-style-type:square;">
-	            <li>Advancement of Data Visualization techniques</li>
-	            <li>Learning to start/end projects in a methodical manner</li>
-	            <li>Improvement of ability to combine various tools and techniques for the purpose of creating 
-		      easily understood, navigated, useful, and meaningful visualizations</li>
-	          </ul>
+          <h2 class="title">DATASET</h2>
+          <p>The restaurant data was collected from the Zomato API, then taken from Kaggle as a csv 
+		    file. The dataset is comprised of approxiately 9500 global restaurants from 15 
+		    countries. 5 features were chosen for this analysis: Country, City, Cuisine, Rating, 
+		    and Price.</p>
+          <h3 class="subtitle">COUNTRY/CITY</h3>
+	  <p>This dataset has 15 countries and 140 cities of interest. The countries are highlighted 
+		    below, and the cities will be explored more closely further on It's important to note 
+		    that large countries such as China or Russia, or even countries that are strong 
+		    at the culinary arts (e.g., Italy, Japan) are not included. This does have an effect 
+		    on the conclusions I will try to draw from this project.
+		    <img src="images/country.png" alt="alt text"></p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="feature">
+    <div class="container">
+      <div class="row">
+        <div class="title-area">
+	  <script src="https://d3js.org/d3.v4.min.js"></script>
+            <h2 class="title">Cuisine (Top 10)</h2>
+            <p>This dataset has 135 different cuisines. Let's take a look at the top 10.
+			<style>
+				body {
+					margin: 0px;
+				}
+				.domain {
+					display: none;
+				}
+				.tick line {
+					stroke: #C0C0BB;
+				}
+				.tick text {
+					fill: #8E8883;
+					font-size: 13px;
+					font-family: sans-serif;
+				}
+				.axis-label {
+					fill: #635F5D;
+					font-size: 25px;
+					font-family: sans-serif;
+					shape-rendering: crispEdges;
+				}
+			</style>
+			<svg width="950" height="600"></svg>
+			<script>
+			  const xValue = d => d.cuisine;
+			  const xLabel = 'Cuisine';
+			  const yValue = d => d.number;
+			  const yLabel = '# of Restaurants';
+			  const margin = { left: 150, right: 70, top: 20, bottom: 110 };
+			  const svg = d3.select('svg');
+			  const width = svg.attr('width');
+			  const height = svg.attr('height');
+			  const innerWidth = width - margin.left - margin.right;
+			  const innerHeight = height - margin.top - margin.bottom;
+			  const g = svg.append('g')
+				  .attr("transform", "translate(" + margin.left + "," + margin.top + ')');
+			  const xAxisG = g.append('g')
+				  .attr('transform', `translate(0, ${innerHeight})`);
+			  const yAxisG = g.append('g');
+			  xAxisG.append('text')
+				  .attr('class', 'axis-label')
+				  .attr('x', innerWidth / 2)
+				  .attr('y', 90)
+				  .text(xLabel);
+			  yAxisG.append('text')
+				  .attr('class', 'axis-label')
+				  .attr('x', -innerHeight / 2)
+				  .attr('y', -100)
+				  .attr('transform', `rotate(-90)`)
+				  .style('text-anchor', 'middle')
+				  .text(yLabel);
+			  const xScale = d3.scaleBand()
+				.paddingInner(0.3)
+				.paddingOuter(0.2);
+				
+			  const yScale = d3.scaleLinear();
+			  const xAxis = d3.axisBottom()
+				.scale(xScale)
+				.tickPadding(15)
+				.tickSize(-innerHeight);
+			  const yTicks = 10;
+			  const yAxis = d3.axisLeft()
+				.scale(yScale)
+				.ticks(yTicks)
+				.tickPadding(5)
+				.tickFormat(d3.format('.0s'))
+				.tickSize(-innerWidth);
+			  const row = d => {
+				return {
+				  cuisine: d['Cuisine'],
+				  number: +d['Number']
+				};
+			  };
+			  const top10 = data => data.slice(0, 10);
+			  d3.csv('cuisine_num.csv', row, data => {
+				data = top10(data);
+				xScale
+				  .domain(data.map(xValue))
+				  .range([0, innerWidth]);
+				yScale
+				  .domain([0, d3.max(data, yValue)])
+				  .range([innerHeight, 0])
+				  .nice(yTicks);
+				g.selectAll('rect').data(data)
+				  .enter().append('rect')
+					.attr('x', d => xScale(xValue(d)))
+					.attr('y', d => yScale(yValue(d)))
+					.attr('width', d => xScale.bandwidth())
+					.attr('height', d => innerHeight - yScale(yValue(d)))
+					.attr('fill', 'steelblue');
+				xAxisG.call(xAxis)
+				  .selectAll('.tick line').remove();
+				yAxisG.call(yAxis);
+			  });
+			</script></p>
+			<p>The dataset used for this visualization can be found on GitHub along with its 
+			description.</p>
+        </div>
+      </div>
+      <div class="title-area">
+        <h2 class="title">Rating/Pricing</h2>
+        <p>The restaurants from this database are given ratings from a range of [0,5] with increments of 
+			0.1. The Pricing is similarly in a range of values. Each restaurant belongs to a different price 
+			range. The prices are categorized between 1-4, with an increment of 1. 4 is of course the 
+			most expensive.</p>
       </div>
     </div>
   </section>
