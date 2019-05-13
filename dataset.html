@@ -148,8 +148,8 @@
 				g.selectAll('text').data(data)
 				  .enter().append('text')
 				  	.attr("class", "label")
-				  	.attr("x", function(d, i) { return i * (width / data.length);})
-   					.attr("y", function(d) { yScale(yValue(d)) + 3;})
+				  	.attr("x", xLabel)
+   					.attr("y", d => xScale.bandwidth())
 				  	.text(yValue);
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
