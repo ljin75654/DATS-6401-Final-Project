@@ -150,7 +150,7 @@
 				  	.attr("class", "label")
 				  	.attr("x", xLabel)
    					.attr("y", d => xScale.bandwidth())
-				  	.text(function (d) { return d3.round(yValue(d)); });
+				  	.text(function (d) { return yValue(d);});
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
