@@ -150,7 +150,7 @@
 				  	.attr("class", "label")
 				  	.attr("x", function(d, i) { return i * (width / data.length);})
    					.attr("y", function(d) { return height - (d * 2);})
-				  	.text(d => yScale(yValue(d)));
+				  	.text(yValue);
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
