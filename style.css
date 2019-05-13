@@ -284,3 +284,11 @@ body {
     padding: 20px;
     border: 10px outset bisque;
   }
+
+  .report-home {
+    background-color: #4396ff;	
+    color: #fff;
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 15px;
+  }
