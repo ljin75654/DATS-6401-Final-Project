@@ -89,7 +89,12 @@
 			  const height = svg.attr('height');
 			  const innerWidth = width - margin.left - margin.right;
 			  const innerHeight = height - margin.top - margin.bottom;
-			  const tooltip = d3.select("body").append("div").attr("class", "toolTip");
+			  var tooltip = d3.select("body")
+    			    	.append("div")
+    				.style("position", "absolute")
+    				.style("z-index", "10")
+    				.style("visibility", "hidden")
+    				.style("background", "#000");
 			  const g = svg.append('g')
 				  .attr("transform", "translate(" + margin.left + "," + margin.top + ')');
 			  const xAxisG = g.append('g')
@@ -146,14 +151,8 @@
 					.attr('width', d => xScale.bandwidth())
 					.attr('height', d => innerHeight - yScale(yValue(d)))
 					.attr('fill', 'steelblue');
-				        .on("mousemove", function(d){
-            				  tooltip
-              				    .style("left", d3.event.pageX - 50 + "px")
-              				    .style("top", d3.event.pageY - 70 + "px")
-              				    .style("display", "inline-block")
-              				    .html((xValue) + "<br>" + (yValue));
-        				})
-    					.on("mouseout", function(d){ tooltip.style("display", "none");});
+				        .on("mouseover", function(d){tooltip.text(d); return tooltip.style("visibility", "visible");})
+      					.on("mouseout", function(){return tooltip.style("visibility", "hidden");});
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
