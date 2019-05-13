@@ -280,3 +280,10 @@ body {
     text-align: left;
     padding: 10px 50px 10px 80px;
   }
+
+  .outset {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 10px outset yellowgreen;
+  }
