@@ -149,7 +149,7 @@
 				  .enter().append('text')
 				  	.attr("class", "label")
 				  	.attr("x", xLabel)
-   					.attr("y", d => xScale.bandwidth())
+   					.attr("y", function (d) { return xScale.bandwidth(d);})
 				  	.text(function (d) { return yValue(d);});
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
