@@ -16,7 +16,7 @@
     <a href="visual.html">Visualization</a>
     <a href="contributors.html">Contributors</a>
   </div>
-
+    
   <div id="main">
 
   <div class="container">
@@ -24,21 +24,30 @@
     <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
   </div>
 
-  <div class="title">
-  <p>In this example, the sidebar is hidden (style="display:none")</p>
-  <p>It is shown when you click on the menu icon in the top left corner.</p>
-  <p>When it is opened, it shifts the page content to the right.</p>
-  <p>We use JavaScript to add a 25% left margin to the div element with id="main" when this happens. The value "25%" matches the width of the sidebar.</p>
-  </div>
-    
+  <section id="about">
+    <div class="container">
+      <div class="row">
+        <div class="title-area">
+          <h2 class="title">Project (3 goals)</h2>
+	          <ul style="list-style-type:square;">
+	            <li>Advancement of Data Visualization techniques</li>
+	            <li>Learning to start/end projects in a methodical manner</li>
+	            <li>Improvement of ability to combine various tools and techniques for the purpose of creating 
+		      easily understood, navigated, useful, and meaningful visualizations</li>
+	          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+	  
   <div class="footer">
     <p>by Lydia Jin</p>
   </div>
 
   <script>
   function openNav() {
-    document.getElementById("main").style.marginLeft = "15%";
-    document.getElementById("mySidebar").style.width = "15%";
+    document.getElementById("main").style.marginLeft = "20%";
+    document.getElementById("mySidebar").style.width = "20%";
     document.getElementById("mySidebar").style.display = "block";
   }
   function closeNav() {
