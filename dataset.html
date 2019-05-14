@@ -79,21 +79,21 @@
 			</style>
 			<svg width="950" height="600"></svg>
 			<script>
-			  var xValue = function(d) { return d.cuisine};
-			  const xLabel = 'Cuisine';
-			  const yValue = d => d.number;
-			  const yLabel = '# of Restaurants';
-			  const margin = { left: 150, right: 70, top: 20, bottom: 110 };
-			  const svg = d3.select('svg');
-			  const width = svg.attr('width');
-			  const height = svg.attr('height');
-			  const innerWidth = width - margin.left - margin.right;
-			  const innerHeight = height - margin.top - margin.bottom;
-			  const g = svg.append('g')
+			  var xValue = function(d) { return d.cuisine;};
+			  var xLabel = 'Cuisine';
+			  var yValue = function(d) { return d.number;};
+			  var yLabel = '# of Restaurants';
+			  var margin = { left: 150, right: 70, top: 20, bottom: 110 };
+			  var svg = d3.select('svg');
+			  var width = svg.attr('width');
+			  var height = svg.attr('height');
+			  var innerWidth = width - margin.left - margin.right;
+			  var innerHeight = height - margin.top - margin.bottom;
+			  var g = svg.append('g')
 				  .attr("transform", "translate(" + margin.left + "," + margin.top + ')');
-			  const xAxisG = g.append('g')
+			  var xAxisG = g.append('g')
 				  .attr('transform', `translate(0, ${innerHeight})`);
-			  const yAxisG = g.append('g');
+			  var yAxisG = g.append('g');
 			  xAxisG.append('text')
 				  .attr('class', 'axis-label')
 				  .attr('x', innerWidth / 2)
@@ -106,29 +106,29 @@
 				  .attr('transform', `rotate(-90)`)
 				  .style('text-anchor', 'middle')
 				  .text(yLabel);
-			  const xScale = d3.scaleBand()
+			  var xScale = d3.scaleBand()
 				.paddingInner(0.3)
 				.paddingOuter(0.2);
 				
-			  const yScale = d3.scaleLinear();
-			  const xAxis = d3.axisBottom()
+			  var yScale = d3.scaleLinear();
+			  var xAxis = d3.axisBottom()
 				.scale(xScale)
 				.tickPadding(15)
 				.tickSize(-innerHeight);
-			  const yTicks = 10;
-			  const yAxis = d3.axisLeft()
+			  var yTicks = 10;
+			  var yAxis = d3.axisLeft()
 				.scale(yScale)
 				.ticks(yTicks)
 				.tickPadding(5)
 				.tickFormat(d3.format('.0s'))
 				.tickSize(-innerWidth);
-			  const row = d => {
+			  var row = d => {
 				return {
 				  cuisine: d['Cuisine'],
 				  number: +d['Number']
 				};
 			  };
-			  const top10 = data => data.slice(0, 10);
+			  var top10 = data => data.slice(0, 10);
 			  d3.csv('cuisine_num.csv', row, data => {
 				data = top10(data);
 				xScale
@@ -140,10 +140,10 @@
 				  .nice(yTicks);
 				g.selectAll('rect').data(data)
 				  .enter().append('rect')
-					.attr('x', d => xScale(xValue(d)))
-					.attr('y', d => yScale(yValue(d)))
-					.attr('width', d => xScale.bandwidth())
-					.attr('height', d => innerHeight - yScale(yValue(d)))
+					.attr('x', function(d) { return xScale(xValue(d));})
+					.attr('y', function(d) { return yScale(yValue(d));})
+					.attr('width', function(d) { return xScale.bandwidth();})
+					.attr('height', function(d) { return innerHeight - yScale(yValue(d));})
 					.attr('fill', 'steelblue');
 				xAxisG.call(xAxis)
 				  .selectAll('.tick line').remove();
