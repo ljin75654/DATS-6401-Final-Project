@@ -54,7 +54,7 @@
             <p>This dataset has 135 different cuisines. Some of the cuisines can be grouped together, such 
 		    as Southern Indian and Central Indian to just Indian. There are also other cuisine types such 
 		    as Coffee that can be placed in the Beverages grouping. But there are still too many cuisines 
-		    to look at all at once, so let's just take a look at the top 10.
+		    to look at all at once, so let's just take a look at the top 10. <br /> <br />
 			<style>
 				body {
 					margin: 0px;
@@ -145,7 +145,8 @@
 					.attr('width', function(d) { return xScale.bandwidth();})
 					.attr('height', function(d) { return innerHeight - yScale(yValue(d));})
 					.attr('fill', 'steelblue');
-				xAxisG.call(xAxis);
+				xAxisG.call(xAxis)
+				  .selectAll('.tick line').remove();
 				yAxisG.call(yAxis);
 			  });
 			</script></p>
