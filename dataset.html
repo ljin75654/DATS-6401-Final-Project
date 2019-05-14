@@ -79,7 +79,7 @@
 			</style>
 			<svg width="950" height="600"></svg>
 			<script>
-			  const xValue = d => d.cuisine;
+			  var xValue = function(d) { return d.cuisine};
 			  const xLabel = 'Cuisine';
 			  const yValue = d => d.number;
 			  const yLabel = '# of Restaurants';
