@@ -28,13 +28,49 @@
     <div class="container">
       <div class="row">
         <div class="title-area">
-          <h2 class="title">Project (3 goals)</h2>
-	          <ul style="list-style-type:square;">
-	            <li>Advancement of Data Visualization techniques</li>
-	            <li>Learning to start/end projects in a methodical manner</li>
-	            <li>Improvement of ability to combine various tools and techniques for the purpose of creating 
-		      easily understood, navigated, useful, and meaningful visualizations</li>
-	          </ul>
+          <h2 class="title">DENSITY BY COUNTRY</h2>
+	  <p>Here, I'm creating Choropleth world maps to look at restaurant density by country.</p>
+	  <h3 class="subtitle">DENSITY OF RESTAURANTS BY COUNTRY</h3>
+	  <p>The plot below shows the country locations and the number of restaurants for each. It 
+			becomes clear right away that India has a disproportionally large number of restaurants 
+			compared to the others.<img src="images/country_num.png" alt="alt text"></p>
+	  <h3 class="subtitle">TOP 3 CUISINE (DENSITY OF RESTAURANT BY COUNTRY)</h3>
+	  <p>There are some quick conclusions to be made. It was made clear before that India has the highest 
+		  overall density, but now we can see that it has the highest density of restaurants for all 
+		  3 of the most prevalent cuisines. In the case of the Mughlai cuisine, India is one of only 
+		  two countries that serves it. There is a large disparity shown here between India and 
+		  the other countries. But since we are only looking at 15 countries and the data doesn't 
+		  account for all restaurants, it's still too early to make definitive conclusions.</p>
+	  <h2 class="title">BEST RATED</h2>
+	  <p>Here, I'm creating bar charts to visualize the best rated restaurants and cuisines for each country.</p>
+	  <h3 class="subtitle">BEST RATED RESTAURANTS</h3>
+	  <p>Since there are 15 countries to look through, I instead just took the two countries 
+			with the greatest number of restaurants (India and United States). We can see some 
+			interesting patterns occuring. For India, there's a clear upward trend. We expect there 
+			to be less highly rated restaurants, which is about expected. But for the US, we can 
+			see that the greatest number of restaurants are around the "Good" range (3.6-4.3). Of course, 
+			again we cannot reach any strong conclusions just based off of this, since India has 
+			thousands of more sample points than the US.<strong> Click the images below for a closer 
+			look:</strong></p>
+	  <div class="gallery">
+	    <a target="_blank" href="images/best_rated_india.png">
+	      <img src="images/best_rated_india.png" alt="Indian Restaurant Ratings" width="800" height="500">
+	    </a>
+	    <div class="desc">Indian Restaurant Ratings</div>
+	  </div>
+	  <div class="gallery">
+	    <a target="_blank" href="images/best_rated_US.png">
+	      <img src="images/best_rated_US.png" alt="US Restaurant Ratings" width="800" height="500">
+	    </a>
+	    <div class="desc">US Restaurant Ratings</div>
+	  </div>
+          <h2 class="title">PRICE/RATING</h2>
+	  <p>Here, I'm creating bar charts to look at average price and rating for each country.</p>
+	  <h3 class="subtitle">AVERAGE PRICE AND RATING BY COUNTRY</h3>
+	  <p>Here, I'm interested in seeing if there is any correlation to be found between price and 
+		  rating. Also, there may be an effect on these two features depending on the country, so 
+		  it is important to make judgements based on previous information on restaurant density 
+		  for each country.</p>
         </div>
       </div>
     </div>
