@@ -302,7 +302,7 @@ body {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
-    height: 100px;
+    width: 200px;
     position: relative;
   }
 
