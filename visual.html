@@ -48,6 +48,41 @@
 		  rating. Also, there may be an effect on these two features depending on the country, so 
 		  it is important to make judgements based on previous information on restaurant density 
 		  for each country.</p>
+ 	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	  <script type="text/javascript">
+	    google.charts.load('current', {'packages':['bar']});
+	    google.charts.setOnLoadCallback(drawChart);
+
+	    function drawChart() {
+	      var data = google.visualization.arrayToDataTable([
+	        ['Country', 'Price', 'Rating'],
+		['Australia', 2.12, 3.66],
+		['Brazil', 3.40, 3.76],
+		['Canada', 2.50, 3.58],
+		['India', 1.72, 2.52],
+		['Indonesia', 2.95, 4.30],
+		['New Zealand', 3.15, 4.26],
+		['Philippines', 3.36, 4.47],
+		['Qatar', 3.65, 4.06],
+		['Singapore', 3.65, 3.58],
+		['South Africa', 3.58, 4.21],
+		['Sri Lanka', 2.85, 3.87],
+		['Turkey', 2.82, 4.30],
+		['UAE', 3.22, 4.23],
+		['United Kingdom', 2.75, 4.09],
+		['United States', 2.05, 4.01]
+	      ]);
+	      var options = {
+		chart: {
+		  title: 'Average Price and Rating by Country',
+		},
+		bars: 'horizontal'
+	      };
+	      var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+	      chart.draw(data, google.charts.Bar.convertOptions(options));
+	    }
+	    </script>
+	  <div id="barchart" style="width: 900px; height: 500px;"></div>
 	  <h2 class="title">BEST RATED</h2>
 	  <p>Here, I'm creating bar charts to visualize the best rated restaurants and cuisines for each country.</p>
 	  <h3 class="subtitle">BEST RATED RESTAURANTS</h3>
