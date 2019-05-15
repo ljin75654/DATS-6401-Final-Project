@@ -41,6 +41,87 @@
 		  restaurants. But still, there is a large disparity shown here between Indian cuisine and other 
 		  cuisine types. But since we are only looking at 15 countries and the data doesn't 
 		  account for all restaurants, it's still too early to make definitive conclusions.</p>
+	  <h3 class="subtitle">Indian Cuisine</h3>
+	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
+            google.charts.load('current', {
+              'packages':['geochart'],
+              'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+            function drawRegionsMap() {
+              var data = google.visualization.arrayToDataTable([
+                ['Country', 'Number'],
+                ['Brazil', 1],
+                ['India', 4191],
+                ['Philippines', 2],
+                ['Qatar', 8],
+                ['Singapore', 1],
+                ['South Africa', 2],
+		['Sri Lanka', 3],
+		['UAE', 26],
+		['United Kingdom', 17],
+		['United States', 8]
+              ]);
+              var options = {};
+              var chart = new google.visualization.GeoChart(document.getElementById('indian_density'));
+              chart.draw(data, options);
+            }
+          </script>
+          <div id="indian_density" style="width: 900px; height: 500px;"></div>
+          <h3 class="subtitle">Chinese Cuisine</h3>
+          <script type="text/javascript">
+            google.charts.load('current', {
+              'packages':['geochart'],
+              'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+            function drawRegionsMap() {
+              var data = google.visualization.arrayToDataTable([
+                ['Country', 'Number'],
+                ['Canada', 1],
+                ['India', 2688],
+                ['New Zealand', 1],
+                ['Philippines', 1],
+                ['Qatar', 3],
+                ['Singapore', 3],
+		['Sri Lanka', 3],
+		['UAE', 9],
+		['United Kingdom', 2],
+		['United States', 22]
+              ]);
+              var options = {};
+              var chart = new google.visualization.GeoChart(document.getElementById('chinese_density'));
+              chart.draw(data, options);
+            }
+          </script>
+          <div id="chinese_density" style="width: 900px; height: 500px;"></div>
+          <h3 class="subtitle">Fast Food Cuisine</h3>
+          <script type="text/javascript">
+            google.charts.load('current', {
+              'packages':['geochart'],
+              'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
+            });
+            google.charts.setOnLoadCallback(drawRegionsMap);
+            function drawRegionsMap() {
+              var data = google.visualization.arrayToDataTable([
+                ['Country', 'Number'],
+                ['Brazil', 3],
+                ['India', 1963],
+                ['New Zealand', 1],
+                ['Singapore', 1],
+                ['South Africa', 1],
+		['Sri Lanka', 3],
+		['UAE', 5],
+		['United Kingdom', 4],
+		['United States', 6]
+              ]);
+              var options = {};
+              var chart = new google.visualization.GeoChart(document.getElementById('ff_density'));
+              chart.draw(data, options);
+            }
+          </script>
+          <div id="ff_density" style="width: 900px; height: 500px;"></div>
           <h2 class="title">PRICE/RATING</h2>
 	  <p>Here, I'm creating bar charts to look at average price and rating for each country.</p>
 	  <h3 class="subtitle">AVERAGE PRICE AND RATING BY COUNTRY</h3>
@@ -48,7 +129,6 @@
 		  rating. Also, there may be an effect on these two features depending on the country, so 
 		  it is important to make judgements based on previous information on restaurant density 
 		  for each country.</p>
- 	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	  <script type="text/javascript">
 	    google.charts.load('current', {'packages':['bar']});
 	    google.charts.setOnLoadCallback(drawChart);
@@ -80,11 +160,11 @@
 		colors: ['#769EED', '#7570B3'],
 		legend: {'position':'top','alignment':'center'},
 	      };
-	      var chart = new google.charts.Bar(document.getElementById('barchart'));
+	      var chart = new google.charts.Bar(document.getElementById('price_rating'));
 	      chart.draw(data, google.charts.Bar.convertOptions(options));
 	    }
-	    </script>
-	  <div id="barchart" style="width: 900px; height: 500px;"></div>
+	  </script>
+	  <div id="price_rating" style="width: 900px; height: 500px;"></div>
 	  <h2 class="title">BEST RATED</h2>
 	  <p>Here, I'm creating bar charts to visualize the best rated restaurants and cuisines for each country.</p>
 	  <h3 class="subtitle">BEST RATED RESTAURANTS</h3>
