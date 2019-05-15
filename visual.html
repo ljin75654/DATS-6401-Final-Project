@@ -76,7 +76,8 @@
 		chart: {
 		  title: 'Average Price and Rating by Country',
 		},
-		bars: 'horizontal'
+		bars: 'horizontal',
+		colors: ['#d95f02', '#7570b3']
 	      };
 	      var chart = new google.charts.Bar(document.getElementById('barchart'));
 	      chart.draw(data, google.charts.Bar.convertOptions(options));
