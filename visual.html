@@ -90,7 +90,9 @@
 		['United Kingdom', 2],
 		['United States', 22]
               ]);
-              var options = {};
+              var options = {
+	        colorAxis: {colors: ['purple', 'pink']}
+	      };
               var chart = new google.visualization.GeoChart(document.getElementById('chinese_density'));
               chart.draw(data, options);
             }
