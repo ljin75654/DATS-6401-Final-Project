@@ -63,7 +63,9 @@
 		['United Kingdom', 17],
 		['United States', 8]
               ]);
-              var options = {};
+              var options = {
+	        colorAxis: {colors: ['#C973E9', 'pink']}
+	      };
               var chart = new google.visualization.GeoChart(document.getElementById('indian_density'));
               chart.draw(data, options);
             }
@@ -91,7 +93,7 @@
 		['United States', 22]
               ]);
               var options = {
-	        colorAxis: {colors: ['purple', 'pink']}
+	        colorAxis: {colors: ['#C973E9', 'pink']}
 	      };
               var chart = new google.visualization.GeoChart(document.getElementById('chinese_density'));
               chart.draw(data, options);
@@ -118,7 +120,9 @@
 		['United Kingdom', 4],
 		['United States', 6]
               ]);
-              var options = {};
+              var options = {
+	        colorAxis: {colors: ['#C973E9', 'pink']}
+	      };
               var chart = new google.visualization.GeoChart(document.getElementById('ff_density'));
               chart.draw(data, options);
             }
