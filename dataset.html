@@ -40,6 +40,41 @@
 		    at the culinary arts (e.g., Italy, Japan) are not included. This does have an effect 
 		  on the conclusions I will try to draw from this project.<br /> <br />
 		    <img src="images/country.png" alt="alt text"></p>
+	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+          <script type="text/javascript">
+            google.charts.load('current', {
+              'packages':['geochart'],
+              'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
+            });
+            google.charts.setOnLoadCallback(drawMap);
+            function drawMap() {
+              var data = google.visualization.arrayToDataTable([
+                ['Country'],
+		['Australia'],
+                ['Brazil'],
+		['Canada'],
+                ['India'],
+		['Indonesia'],
+		['New Zealand'],
+                ['Philippines'],
+                ['Qatar'],
+                ['Singapore'],
+                ['South Africa'],
+		['Sri Lanka'],
+		['Turkey'],
+		['UAE'],
+		['United Kingdom'],
+		['United States']
+              ]);
+              var options = {
+	        defaultColor: '#C973E9'
+	      };
+              var chart = new google.visualization.GeoChart(document.getElementById('countries'));
+              chart.draw(data, options);
+            }
+          </script>
+          <div id="countries" style="width: 900px; height: 500px;"></div>
+	  <br />
         </div>
       </div>
     </div>
