@@ -244,7 +244,7 @@
               });
               var makeVisualization = function(cityMap) {
                   var margin = { top: 30, right: 50, bottom: 30, left: 50 },
-                      width  = 1050 - margin.left - margin.right,
+                      width  = 1100 - margin.left - margin.right,
                       height = 450 - margin.top  - margin.bottom;
                   var xScale = d3.scale.ordinal()
                       .domain(cuisineNumbers)
@@ -260,14 +260,6 @@
                   var xAxis = d3.svg.axis()
                       .scale(xScale)
                       .orient("bottom");
-		  var xAxisH = conv.append("g")
-		      .attr("class", "x axis")
-		      .call(xAxis);
-		  xAxisH.append("text")
-		      .attr("x", 0 + (width/2))
-		      .attr("y", 0 - margin.bottom)
-      		      .style("text-anchor", "middle")
-      		      .text("Cuisine Type");
                   conv.append("g")
                       .attr("class", "x axis")
                       .attr("transform", "translate(0," + height + ")")
