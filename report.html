@@ -6,7 +6,8 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
   </head>
   <body>
-
+	  
+  <!-- sidebar menu with links to 6 webpages -->
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
@@ -19,11 +20,13 @@
     
   <div id="main">
 
+  <!-- header image and the sidebar menu button -->	  
   <div class="container">
     <img src="images/restaurantheader.jpg" alt="Restaurant Header" style="width:100%;">
     <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
   </div>
 
+  <!-- report section with abstract of project report -->  
   <section id="report">
     <div class="container">
       <div class="row">
@@ -44,16 +47,19 @@
 			  percentages of restaurants in each country and the percentages of cuisine types from 
 			  top-rated restaurants. This report will discuss the various objectives, requirements, 
 			  and conclusions explored in this project.</p>
+	  <!-- button with link to full report -->
 	  <a class="report-home" href="report/Final Technical Report.pdf">Full Report</a>
         </div>
       </div>
     </div>
   </section>
-	  
+	
+  <!-- footer -->	  
   <div class="footer">
     <p>by Lydia Jin</p>
   </div>
-
+	  
+  <!-- Javascript to create effects of sidebar menu -->
   <script>
   function openNav() {
     document.getElementById("main").style.marginLeft = "20%";
