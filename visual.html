@@ -206,7 +206,6 @@
 		was found previously (India has the highest density of restaurants), all 5 cities are in India. We 
 		can see some </p>
 	  <br />
-	  <br />
 	  <div id='visual-container'></div>
 	    <style>
 	      body {
@@ -245,7 +244,7 @@
               });
               var makeVisualization = function(cityMap) {
                   var margin = { top: 30, right: 50, bottom: 30, left: 50 },
-                      width  = 900 - margin.left - margin.right,
+                      width  = 1050 - margin.left - margin.right,
                       height = 450 - margin.top  - margin.bottom;
                   var xScale = d3.scale.ordinal()
                       .domain(cuisineNumbers)
@@ -265,7 +264,8 @@
 		      .attr("class", "x axis")
 		      .call(xAxis);
 		  xAxisH.append("text")
-		      .attr("transform", "translate(" + (width/2) + " ," + (height + margin.top + 20) + ")")
+		      .attr("x", 0 + (width/2))
+		      .attr("y", 0 - margin.bottom)
       		      .style("text-anchor", "middle")
       		      .text("Cuisine Type");
                   conv.append("g")
@@ -322,6 +322,8 @@
                   updateB(initialD);
               };
             </script>
+	    <br />
+	    <br />
         </div>
       </div>
     </div>
