@@ -3,6 +3,7 @@ body {
     background-color: #BAC5CB;
 }
 
+/* sidebar menu section */
 .sidebar {
     height: 100%;
     width: 0;
@@ -43,6 +44,7 @@ body {
     transition: margin-left .5s;
   }
 
+  /* header section */
   .container img {
     width: auto;
     height: 100%;
@@ -53,6 +55,7 @@ body {
     font-size: 33px;
   }
 
+  /* sidebar menu button */
   .openbtn {
     font-size: 33px;
     cursor: pointer;
@@ -76,6 +79,7 @@ body {
     color: white;
   }
 
+  /* general title section formatting */
   .title {
     padding: 10px 10px;
     float: center;
@@ -105,6 +109,7 @@ body {
 	text-align: left;
   }
 
+  /* home section */
   #home{
 	display: inline;
 	padding: 20px 50px 10px 80px;
@@ -124,6 +129,7 @@ body {
     font-size: 20px;
   }
 
+  /* timeline section */
   .timeline {
     list-style: none;
     padding: 20px 20px 20px;
@@ -262,6 +268,7 @@ body {
     margin-top: 5px;
   }
 
+  /* footer section */
   .footer {
     position: fixed;
     left: 0;
@@ -280,11 +287,13 @@ body {
     padding: 10px 50px 10px 80px;
   }
 
+  /* border formatting */
   .outset {
     padding: 20px;
     border: 10px outset bisque;
   }
 
+  /* report section */
   .report-home {
     background-color: #F9D3D3;	
     color: #1E7D1E;
@@ -298,6 +307,7 @@ body {
     text-decoration: underline;
   }
 
+  /* image gallery section */
   div.gallery {
     margin: 5px;
     border: 1px solid #ccc;
