@@ -74,12 +74,8 @@
 	  <br />
           <h3 class="subtitle">Chinese Cuisine</h3>
           <script type="text/javascript">
-            google.charts.load('current', {
-              'packages':['geochart'],
-              'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
-            });
-            google.charts.setOnLoadCallback(drawRegionsMap);
-            function drawRegionsMap() {
+            google.charts.setOnLoadCallback(drawMap);
+            function drawMap() {
               var data = google.visualization.arrayToDataTable([
                 ['Country', 'Number'],
                 ['Canada', 1],
@@ -108,8 +104,8 @@
               'packages':['geochart'],
               'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
             });
-            google.charts.setOnLoadCallback(drawRegionsMap);
-            function drawRegionsMap() {
+            google.charts.setOnLoadCallback(drawMap);
+            function drawMap() {
               var data = google.visualization.arrayToDataTable([
                 ['Country', 'Number'],
                 ['Brazil', 3],
