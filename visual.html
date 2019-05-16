@@ -202,6 +202,16 @@
 		the greatest number of restaurants.</p>
 	  <h3 class="subtitle">Cuisine Type Distribution in Cities</h3>
 	  <p></p>
+	  <style>
+	    .arc text {
+  	      font: 10px sans-serif;
+  	      text-anchor: middle;
+	    }
+	    .arc path {
+              stroke: #fff;
+            }
+	  </style>
+	  <script src="https://d3js.org/d3.v4.min.js"></script>
 	  <script>
 	    var width = 960,
 	      height = 500,
@@ -262,7 +272,6 @@
     document.getElementById("main").style.marginLeft= "0";
   }
   </script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
 
   </body>
 </html>
