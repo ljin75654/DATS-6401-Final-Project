@@ -263,7 +263,7 @@
                   var yAxis = d3.svg.axis()
                       .scale(yScale)
                       .orient("left");
-                  var yAxisH = canvas.append("g")
+                  var yAxisH = conv.append("g")
                       .attr("class", "y axis")
                       .call(yAxis);
                   yAxisH.append("text")
