@@ -232,7 +232,7 @@
 	      .attr("height", height)
 	    .append("g")
 	      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
-	    d3.csv("percent.csv", type, function(error, data) {
+	    d3.csv("datasets/new_delhi_percent.csv", type, function(error, data) {
 	      if (error) throw error;
 	      console.log(pie(data))
 	      var g = svg.selectAll(".arc")
