@@ -202,9 +202,6 @@
 		the greatest number of restaurants. This visualization has a dropdown menu to switch between 
 		the 5 cities.</p>
 	  <h3 class="subtitle">Cuisine Type Distribution in Cities</h3>
-	  <p>These 5 bar charts are from the 5 cities with the greatest number of restaurants. In line with what 
-		was found previously (India has the highest density of restaurants), all 5 cities are in India. We 
-		can see some </p>
 	  <br />
 	  <div id='visual-container'></div>
 	    <style>
@@ -272,7 +269,7 @@
                       .call(yAxis);
                   yAxisH.append("text")
                       .attr("transform", "rotate(-90)")
-      		      .attr("y", 0 - margin.left)
+      		      .attr("y", 0 - margin.left - 10)
       		      .attr("x",0 - (height / 2))
       		      .attr("dy", "1em")
       	              .style("text-anchor", "middle")
@@ -316,6 +313,15 @@
             </script>
 	    <br />
 	    <br />
+	  <p>These 5 bar charts are from the 5 cities with the greatest number of restaurants. In line with what 
+		was found previously (India has the highest density of restaurants), all 5 cities are in India. We 
+		have to be careful when observing these charts, as they are on much different scales (different 
+		yAxis values). New Delhi has an enormously large number of restaurants in comparison 
+		to the other Indian cities. Some trends we can see are that the 3 consistently popular cuisines 
+		are Indian, Chinese, and Fast Food. Also, we can see that the largest difference, ratio-wise, 
+		seems to be between the cities of Faridabad and Ghaziabad (the first two cities in the dropdown 
+		menu). The rest seem to have relatively less fluctuation in terms of the ratio of each cuisine type to 
+		the whole.</p>
         </div>
       </div>
     </div>
