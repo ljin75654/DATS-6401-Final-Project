@@ -215,15 +215,15 @@
               select {
                 display: block;
               }
-              .bar {
-                fill: #E170BF;
-                opacity: 0.7;
-              }
-              .axis path,
+	      .axis path,
               .axis line {
                 fill: none;
                 stroke: #000;
                 shape-rendering: crispEdges;
+              }
+              .bar {
+                fill: #E170BF;
+                opacity: 0.7;
               }
 	    </style>
 	    <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -245,8 +245,8 @@
               });
               var makeVisualization = function(cityMap) {
                   var margin = { top: 30, right: 50, bottom: 30, left: 50 },
-                      width  = 700 - margin.left - margin.right,
-                      height = 350 - margin.top  - margin.bottom;
+                      width  = 850 - margin.left - margin.right,
+                      height = 400 - margin.top  - margin.bottom;
                   var xScale = d3.scale.ordinal()
                       .domain(cuisineNumbers)
                       .rangeRoundBands([0, width], 0.1);
@@ -297,7 +297,6 @@
                   var dropdownC = function() {
                       var City = d3.select(this).property('value'),
                           newD   = cityMap[City];
-
                       updateB(newD);
                   };
                   var cities = Object.keys(cityMap).sort();
