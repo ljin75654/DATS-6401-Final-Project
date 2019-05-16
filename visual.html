@@ -48,18 +48,27 @@
               'packages':['geochart'],
               'mapsApiKey': 'AIzaSyCBBo2p9zV0LwFdRQJnN3l_59-BZS34de4'
             });
-            google.charts.setOnLoadCallback(drawRegionsMap);
-            function drawRegionsMap() {
-              $.get("country_num_indian.csv", function(csvString) {
-      	        var arrayData = $.csv.toArrays(csvString, {onParseValue: $.csv.hooks.castToScalar});
-      	        var data = new google.visualization.arrayToDataTable(arrayData);
-     	        var options = {
-        	  colorAxis: {colors: ['#C973E9', 'pink']}
-     		};
-                var chart = new google.visualization.GeoChart(document.getElementById('indian_density'));
-                chart.draw(data, options);
-              });
-	    };
+            google.charts.setOnLoadCallback(drawMap);
+            function drawMap() {
+              var data = google.visualization.arrayToDataTable([
+                ['Country', 'Number'],
+                ['Brazil', 1],
+                ['India', 4191],
+                ['Philippines', 2],
+                ['Qatar', 8],
+                ['Singapore', 1],
+                ['South Africa', 2],
+		['Sri Lanka', 3],
+		['UAE', 26],
+		['United Kingdom', 17],
+		['United States', 8]
+              ]);
+              var options = {
+	        colorAxis: {colors: ['#C973E9', 'pink']}
+	      };
+              var chart = new google.visualization.GeoChart(document.getElementById('indian_density'));
+              chart.draw(data, options);
+            }
           </script>
           <div id="indian_density" style="width: 900px; height: 500px;"></div>
 	  <br />
