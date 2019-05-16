@@ -7,6 +7,7 @@
   </head>
   <body>
 
+  <!-- sidebar menu with links to 6 webpages -->	  
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a href="index.html">Home</a>
@@ -19,15 +20,18 @@
     
   <div id="main">
 
+  <!-- header image and the sidebar menu button -->	  
   <div class="container">
     <img src="images/restaurantheader.jpg" alt="Restaurant Header" style="width:100%;">
     <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
   </div>
-
+	  
+  <!-- visualization section -->
   <section id="visual">
     <div class="container">
       <div class="row">
         <div class="title-area">
+	  <!-- Tableau GeoMap image -->
           <h2 class="title">DENSITY BY COUNTRY</h2>
 	  <p>Here, I'm creating Choropleth world maps to look at restaurant density by country.</p>
 	  <h3 class="subtitle">DENSITY OF RESTAURANTS BY COUNTRY</h3>
@@ -41,6 +45,7 @@
 		  restaurants. But still, there is a large disparity shown here between Indian cuisine and other 
 		  cuisine types. But since we are only looking at 15 countries and the data doesn't 
 		  account for all restaurants, it's still too early to make definitive conclusions.</p>
+	  <!-- 3 Google Visualization API GeoCharts -->
 	  <h3 class="subtitle">Indian Cuisine</h3>
 	  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
           <script type="text/javascript">
@@ -122,6 +127,7 @@
             }
           </script>
           <div id="ff_density" style="width: 900px; height: 500px;"></div>
+	  <!-- horizontal grouped bar chart using Google Visualization API -->
           <h2 class="title">PRICE/RATING</h2>
 	  <p>Here, I'm creating a bar chart to look at average price and rating for each country.</p>
 	  <h3 class="subtitle">AVERAGE PRICE AND RATING BY COUNTRY</h3>
@@ -165,6 +171,7 @@
 	    }
 	  </script>
 	  <div id="price_rating" style="width: 900px; height: 500px;"></div>
+	  <!-- 2 Tableau bar chart images using a CSS image gallery -->
 	  <h2 class="title">BEST RATED</h2>
 	  <p>Here, I'm creating bar charts to visualize the best rated restaurants and cuisines for each country.</p>
 	  <h3 class="subtitle">BEST RATED RESTAURANTS</h3>
@@ -197,6 +204,7 @@
 	  <br />
 	  <br />
 	  <br />
+	  <!-- bar graph with dropdown menu using javascript -->
           <h2 class="title">City Cuisines</h2>
 	  <p>Here, I'm creating 5 bar charts to look at the number of cuisine types for the 5 cities with 
 		the greatest number of restaurants. This visualization has a dropdown menu to switch between 
@@ -204,6 +212,7 @@
 	  <h3 class="subtitle"><center>Cuisine Type Distribution in Cities</center></h3>
 	  <br />
 	  <div id='visual-container'></div>
+	    <!-- CSS style for javascript bar chart visualization -->
 	    <style>
 	      body {
                 font: 15px sans-serif;
@@ -228,6 +237,7 @@
               var cuisineNumbers = ["Bakery", "Burger", "Cafe", "Chinese", "Continental", "Desserts", "Fast Food", 
 				    "Ice Cream", "Indian", "Mithai", "Mughlai", "Other", "Pizza", "Street Food"];
 
+	      /* import city_cuisine.csv data */	    
               d3.csv(fileName, function(error, data) {
                   var cityMap = {};
                   data.forEach(function(d) {
@@ -274,6 +284,7 @@
       		      .attr("dy", "1em")
       	              .style("text-anchor", "middle")
       		      .text("Number");
+		  /* update bar data when using dropdown menu */
                   var updateB = function(data) {
                       yScale.domain( d3.extent(data) );
                       yAxisH.call(yAxis);
@@ -291,6 +302,7 @@
                           .attr("height", function(d,i) { return height - yScale(d); });
                       bars.exit().remove();
                   };
+		  /* dropdown menu with changing values */
                   var dropdownC = function() {
                       var City = d3.select(this).property('value'),
                           newD   = cityMap[City];
@@ -327,10 +339,12 @@
     </div>
   </section>
 	  
+  <!-- footer -->	  
   <div class="footer">
     <p>by Lydia Jin</p>
   </div>
 
+  <!-- Javascript to create effects of sidebar menu -->	  
   <script>
   function openNav() {
     document.getElementById("main").style.marginLeft = "20%";
