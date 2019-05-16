@@ -202,6 +202,46 @@
 		the greatest number of restaurants.</p>
 	  <h3 class="subtitle">Cuisine Type Distribution in Cities</h3>
 	  <p></p>
+	  <script>
+	    var width = 960,
+	      height = 500,
+	      radius = Math.min(width, height) / 2;
+	    var color = d3.scale.ordinal()
+	      .range(["#D99DEF", "#8A87EF", "#87D3EF", "#60DCC3", "#60DC6C", "#92DC60", "#D1E644", "#F7A831", "#EF7461", "#F386CF", "#C17E8C", "#95929A", "#94B375"]);
+	    var arc = d3.svg.arc()
+	      .outerRadius(radius - 10)
+	      .innerRadius(0);
+	    var labelArc = d3.svg.arc()
+	      .outerRadius(radius - 40)
+	      .innerRadius(radius - 40);
+	    var pie = d3.layout.pie()
+	      .sort(null)
+	      .value(function(d) { return d.population; });
+	    var svg = d3.select("body").append("svg")
+	      .attr("width", width)
+	      .attr("height", height)
+	    .append("g")
+	      .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+	    d3.csv("new_delhi_percent.csv", type, function(error, data) {
+	      if (error) throw error;
+	      console.log(pie(data))
+	      var g = svg.selectAll(".arc")
+	          .data(pie(data))
+	        .enter().append("g")
+	          .attr("class", "arc");
+	      g.append("path")
+	          .attr("d", arc)
+	          .style("fill", function(d) { return color(d.data.Cuisine); });
+	      g.append("text")
+	          .attr("transform", function(d) { return "translate(" + labelArc.centroid(d) + ")"; })
+	          .attr("dy", ".35em")
+	          .text(function(d) { return d.data.Cuisine; });
+	    });
+	    function type(d) {
+	      d.percent = +d.percent;
+	      return d;
+	    }
+	  </script>
         </div>
       </div>
     </div>
@@ -222,6 +262,7 @@
     document.getElementById("main").style.marginLeft= "0";
   }
   </script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
 
   </body>
 </html>
