@@ -146,7 +146,7 @@ body {
     left: 33%;
     margin-left: -1.5px;
   }
-  .timeline-panel {
+  .timeline-box {
     padding: 20px 30px;
     background-color: #F9D3D3;
     position: relative;
@@ -176,7 +176,7 @@ body {
   .timeline > li:after {
     clear: both;
   }
-  .timeline > li > .timeline-panel {
+  .timeline > li > .timeline-box {
     width: 25%;
     float: left;
     border: 1px solid #d4d4d4;
@@ -186,7 +186,7 @@ body {
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   }
-  .timeline > li > .timeline-panel:before {
+  .timeline > li > .timeline-box:before {
     position: absolute;
     top: 26px;
     right: -15px;
@@ -197,7 +197,7 @@ body {
     border-bottom: 15px solid transparent;
     content: " ";
   }
-  .timeline > li > .timeline-panel:after {
+  .timeline > li > .timeline-box:after {
     position: absolute;
     top: 27px;
     right: -14px;
@@ -208,7 +208,7 @@ body {
     border-bottom: 14px solid transparent;
     content: " ";
   }
-  .timeline > li > .timeline-badge {
+  .timeline > li > .timeline-circle {
     color: #fff;
     width: 50px;
     height: 50px;
@@ -226,16 +226,16 @@ body {
     border-bottom-right-radius: 50%;
     border-bottom-left-radius: 50%;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
+  .timeline > li.timeline-right > .timeline-box {
     float: right;
   }
-  .timeline > li.timeline-inverted > .timeline-panel:before {
+  .timeline > li.timeline-right > .timeline-box:before {
     border-left-width: 0;
     border-right-width: 15px;
     left: -15px;
     right: auto;
   }
-  .timeline > li.timeline-inverted > .timeline-panel:after {
+  .timeline > li.timeline-right > .timeline-box:after {
     border-left-width: 0;
     border-right-width: 14px;
     left: -14px;
@@ -260,11 +260,11 @@ body {
     margin-top: 0;
     color: inherit;
   }
-  .timeline-body > p,
-  .timeline-body > ul {
+  .timeline-text > p,
+  .timeline-text > ul {
     margin-bottom: 0;
   }
-  .timeline-body > p + p {
+  .timeline-text > p + p {
     margin-top: 5px;
   }
 
